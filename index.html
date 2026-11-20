@@ -5,470 +5,126 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>City Star RP | Senior Administrator Application</title>
 <style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-body {
-  font-family: Arial, sans-serif;
-  color: #f1f5f9;
-  background-color: #090d16;
-  background-image: linear-gradient(135deg, #090d16 0%, #1e1b4b 50%, #0f172a 100%);
-  min-height: 100vh;
-  padding: 15px 15px 80px 15px;
-}
-.top-bar {
-  max-width: 720px;
-  margin: 0 auto 15px auto;
-  text-align: right;
-}
-.staff-btn {
-  background: #1e293b;
-  color: #38bdf8;
-  border: 1px solid #38bdf8;
-  padding: 9px 16px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 13px;
-  font-weight: bold;
-}
-.card {
-  background: rgba(15, 23, 42, 0.94);
-  border: 1px solid #6d28d9;
-  border-radius: 14px;
-  padding: 22px 18px;
-  max-width: 720px;
-  margin: 0 auto;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-}
-.header-box {
-  text-align: center;
-  margin-bottom: 20px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid #334155;
-}
-.header-box h1 {
-  font-size: 20px;
-  color: #38bdf8;
-}
-.header-box p {
-  font-size: 13px;
-  color: #94a3b8;
-  margin-top: 5px;
-}
-.progress-container {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 20px;
-}
-.step-pill {
-  flex: 1;
-  text-align: center;
-  padding: 9px 5px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: bold;
-  background: #1e293b;
-  color: #64748b;
-  border: 1px solid #334155;
-}
-.step-pill.active {
-  background: #312e81;
-  color: #ffffff;
-  border-color: #8b5cf6;
-}
-.form-step {
-  display: none;
-}
-.form-step.active {
-  display: block;
-}
-.form-group {
-  margin-bottom: 18px;
-}
-label {
-  display: block;
-  margin-bottom: 7px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #e2e8f0;
-  line-height: 1.5;
-}
-label span {
-  color: #f43f5e;
-}
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  background: #090d16;
-  border: 1px solid #334155;
-  border-radius: 8px;
-  color: #ffffff;
-  font-size: 14px;
-}
-input:focus, textarea:focus {
-  border-color: #38bdf8;
-  outline: none;
-}
-.btn-group {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-  margin-top: 25px;
-}
-.btn {
-  background: linear-gradient(90deg, #0284c7, #7c3aed);
-  color: #ffffff;
-  border: none;
-  padding: 13px 22px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 14px;
-}
-.btn-prev {
-  background: #334155;
-}
-#reminderScreen {
-  display: none;
-  text-align: center;
-}
-.success-badge {
-  display: inline-block;
-  background: #064e3b;
-  color: #34d399;
-  border: 1px solid #10b981;
-  padding: 8px 16px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 14px;
-  margin-bottom: 16px;
-}
-.note-box {
-  background: #0f172a;
-  border-left: 4px solid #38bdf8;
-  border-top: 1px solid #1e293b;
-  border-right: 1px solid #1e293b;
-  border-bottom: 1px solid #1e293b;
-  padding: 18px;
-  border-radius: 8px;
-  text-align: left;
-  margin-bottom: 20px;
-}
-.note-box h3 {
-  color: #38bdf8;
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-.note-box p {
-  color: #e2e8f0;
-  font-size: 14px;
-  line-height: 1.6;
-}
-#staffView {
-  display: none;
-}
-.app-card {
-  background: #090d16;
-  border: 1px solid #334155;
-  padding: 14px;
-  border-radius: 8px;
-  margin-bottom: 12px;
-  font-size: 13px;
-  line-height: 1.6;
-}
-.app-card strong {
-  color: #38bdf8;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: Arial, sans-serif; color: #f1f5f9; background-color: #090d16; background-image: linear-gradient(to bottom, rgba(9, 13, 22, 0.88), rgba(15, 10, 30, 0.95)), url('https://unsplash.com'); background-size: cover; background-position: center top; padding: 15px 15px 80px 15px; }
+.top-bar { max-width: 720px; margin: 0 auto 15px auto; text-align: right; }
+.staff-btn { background: #1e293b; color: #38bdf8; border: 1px solid #38bdf8; padding: 9px 16px; border-radius: 8px; cursor: pointer; font-size: 13px; font-weight: bold; }
+.card { background: rgba(15, 23, 42, 0.94); border: 1px solid #6d28d9; border-radius: 14px; padding: 22px 18px; max-width: 720px; margin: 0 auto; }
+.header-box { text-align: center; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 1px solid #334155; }
+.header-box h1 { font-size: 20px; color: #38bdf8; }
+.header-box p { font-size: 13px; color: #94a3b8; margin-top: 5px; }
+.progress-container { display: flex; gap: 8px; margin-bottom: 20px; }
+.step-pill { flex: 1; text-align: center; padding: 9px 5px; border-radius: 8px; font-size: 12px; font-weight: bold; background: #1e293b; color: #64748b; border: 1px solid #334155; }
+.step-pill.active { background: #312e81; color: #ffffff; border-color: #8b5cf6; }
+.form-step { display: none; }
+.form-step.active { display: block; }
+.form-group { margin-bottom: 18px; }
+label { display: block; margin-bottom: 7px; font-weight: bold; font-size: 14px; color: #e2e8f0; }
+label span { color: #f43f5e; }
+input, textarea { width: 100%; padding: 12px; background: #090d16; border: 1px solid #334155; border-radius: 8px; color: #ffffff; font-size: 14px; }
+.btn-group { display: flex; justify-content: space-between; gap: 10px; margin-top: 25px; }
+.btn { background: #2563eb; color: #ffffff; border: none; padding: 13px 22px; border-radius: 8px; cursor: pointer; font-weight: bold; font-size: 14px; }
+.btn-prev { background: #334155; }
+#reminderScreen { display: none; text-align: center; }
+.success-badge { display: inline-block; background: #064e3b; color: #34d399; border: 1px solid #10b981; padding: 8px 16px; border-radius: 50px; font-weight: bold; font-size: 14px; margin-bottom: 16px; }
+.note-box { background: #0f172a; border-left: 4px solid #38bdf8; border: 1px solid #1e293b; padding: 18px; border-radius: 8px; text-align: left; margin-bottom: 20px; }
+.note-box h3 { color: #38bdf8; font-size: 16px; margin-bottom: 8px; }
+.note-box p { color: #e2e8f0; font-size: 14px; line-height: 1.6; }
+#staffView { display: none; }
+.app-card { background: #090d16; border: 1px solid #334155; padding: 14px; border-radius: 8px; margin-bottom: 12px; font-size: 13px; line-height: 1.6; }
+.app-card strong { color: #38bdf8; }
 </style>
 </head>
 <body>
-<div class="top-bar">
-  <button type="button" class="staff-btn" id="toggleStaffBtn">Staff Panel</button>
-</div>
+<div class="top-bar"><button type="button" class="staff-btn" id="toggleStaffBtn">Staff Panel</button></div>
 <div class="card" id="playerView">
-  <div class="header-box">
-    <h1>City Star RP | Senior Administrator Application</h1>
-    <p>Questions for Senior Admin Interview Application</p>
-  </div>
-  <div id="formContainer">
-    <div class="progress-container">
-      <div class="step-pill active" id="pill1">Page 1: General Queries</div>
-      <div class="step-pill" id="pill2">Page 2: Questions</div>
-    </div>
-    <form id="appForm">
-      <div class="form-step active" id="step1">
-        <div class="form-group">
-          <label>1. What's your Real Name? <span>*</span></label>
-          <input type="text" id="p1_q1" placeholder="Enter your real name">
-        </div>
-        <div class="form-group">
-          <label>2. What's your Age? <span>*</span></label>
-          <input type="number" id="p1_q2" placeholder="Enter your real age">
-        </div>
-        <div class="form-group">
-          <label>3. What's your Place of Residence and Timezone? <span>*</span></label>
-          <input type="text" id="p1_q3" placeholder="e.g. Dhaka, Bangladesh (GMT+6)">
-        </div>
-        <div class="form-group">
-          <label>4. What's Your IC Name? <span>*</span></label>
-          <input type="text" id="p1_q4" placeholder="Enter your In-Character name">
-        </div>
-        <div class="form-group">
-          <label>5. General Playtime and availability you can offer to administration: <span>*</span></label>
-          <input type="text" id="p1_q5" placeholder="e.g. 4-5 hours daily (6 PM - 11 PM)">
-        </div>
-        <div class="form-group">
-          <label>6. Have you been part of other RP projects before? If yes, kindly mention your experience: <span>*</span></label>
-          <textarea id="p1_q6" rows="3" placeholder="Mention previous RP servers, ranks, and responsibilities..."></textarea>
-        </div>
-        <div class="btn-group" style="justify-content: flex-end;">
-          <button type="button" class="btn" id="nextPageBtn">Next Page</button>
-        </div>
-      </div>
-      <div class="form-step" id="step2">
-        <div class="form-group">
-          <label>1. Why do you wanna join Administration team rather than Role-playing in the project? <span>*</span></label>
-          <textarea id="p2_q1" rows="3" placeholder="Write your answer..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>2. What skill sets do you bring towards the project and administration team? <span>*</span></label>
-          <textarea id="p2_q2" rows="3" placeholder="Mention your management, technical, or leadership skills..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>3. What is/are your biggest weakness about yourself? <span>*</span></label>
-          <textarea id="p2_q3" rows="2" placeholder="Be honest about your weaknesses..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>4. Why should we hire you as Senior Administrator of the project? We expect a brief description if possible. <span>*</span></label>
-          <textarea id="p2_q4" rows="3" placeholder="Provide a brief description..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>5. How would you handle your real life and Administration work simultaneously? <span>*</span></label>
-          <textarea id="p2_q5" rows="2" placeholder="Explain how you will balance both..."></textarea>
-        </div>
-        <div class="form-group">
-          <label>6. What's your opinion about a Senior Administrator and how do they work? <span>*</span></label>
-          <textarea id="p2_q6" rows="3" placeholder="Share your perspective on a Senior Admin's role..."></textarea>
-        </div>
-        <div class="btn-group">
-          <button type="button" class="btn btn-prev" id="prevPageBtn">Previous</button>
-          <button type="submit" class="btn" id="submitBtn">Submit Application</button>
-        </div>
-      </div>
-    </form>
-  </div>
-  <div id="reminderScreen">
-    <div class="success-badge">Application Submitted Successfully!</div>
-    <div class="note-box">
-      <h3>Important Note and Reminder</h3>
-      <p>
-        If you're selected for an interview, we expect you to show up at Voice chat with a working mic.
-        Even if you don't get selected in the project as Senior Admin, you might still have a chance to be recruited as General Administrator or Server Admin.
-        We expect you to look forward to your interview sincerely.
-      </p>
-    </div>
-    <button type="button" class="btn" id="resetBtn">Submit Another Response</button>
-  </div>
+<div class="header-box"><h1>City Star RP | Senior Administrator Application</h1><p>Questions for Senior Admin Interview Application</p></div>
+<div id="formContainer">
+<div class="progress-container"><div class="step-pill active" id="pill1">Page 1: General Queries</div><div class="step-pill" id="pill2">Page 2: Questions</div></div>
+<form id="appForm">
+<div class="form-step active" id="step1">
+<div class="form-group"><label>1. What's your Real Name? <span>*</span></label><input type="text" id="p1_q1" placeholder="Enter your real name"></div>
+<div class="form-group"><label>2. What's your Age? <span>*</span></label><input type="number" id="p1_q2" placeholder="Enter your real age"></div>
+<div class="form-group"><label>3. What's your Place of Residence and Timezone? <span>*</span></label><input type="text" id="p1_q3" placeholder="e.g. Dhaka, Bangladesh (GMT+6)"></div>
+<div class="form-group"><label>4. What's Your IC Name? <span>*</span></label><input type="text" id="p1_q4" placeholder="Enter your In-Character name"></div>
+<div class="form-group"><label>5. General Playtime and availability you can offer to administration: <span>*</span></label><input type="text" id="p1_q5" placeholder="e.g. 4-5 hours daily (6 PM - 11 PM)"></div>
+<div class="form-group"><label>6. Have you been part of other RP projects before? If yes, kindly mention your experience: <span>*</span></label><textarea id="p1_q6" rows="3" placeholder="Mention previous RP servers, ranks, and responsibilities..."></textarea></div>
+<div class="btn-group" style="justify-content: flex-end;"><button type="button" class="btn" id="nextPageBtn">Next Page</button></div>
+</div>
+<div class="form-step" id="step2">
+<div class="form-group"><label>1. Why do you wanna join Administration team rather than Role-playing in the project? <span>*</span></label><textarea id="p2_q1" rows="3" placeholder="Write your answer..."></textarea></div>
+<div class="form-group"><label>2. What skill sets do you bring towards the project and administration team? <span>*</span></label><textarea id="p2_q2" rows="3" placeholder="Mention your management, technical, or leadership skills..."></textarea></div>
+<div class="form-group"><label>3. What is/are your biggest weakness about yourself? <span>*</span></label><textarea id="p2_q3" rows="2" placeholder="Be honest about your weaknesses..."></textarea></div>
+<div class="form-group"><label>4. Why should we hire you as Senior Administrator of the project? We expect a brief description if possible. <span>*</span></label><textarea id="p2_q4" rows="3" placeholder="Provide a brief description..."></textarea></div>
+<div class="form-group"><label>5. How would you handle your real life and Administration work simultaneously? <span>*</span></label><textarea id="p2_q5" rows="2" placeholder="Explain how you will balance both..."></textarea></div>
+<div class="form-group"><label>6. What's your opinion about a Senior Administrator and how do they work? <span>*</span></label><textarea id="p2_q6" rows="3" placeholder="Share your perspective on a Senior Admin's role..."></textarea></div>
+<div class="btn-group"><button type="button" class="btn btn-prev" id="prevPageBtn">Previous</button><button type="submit" class="btn" id="submitBtn">Submit Application</button></div>
+</div>
+</form>
+</div>
+<div id="reminderScreen">
+<div class="success-badge">Application Submitted Successfully!</div>
+<div class="note-box"><h3>Important Note and Reminder</h3><p>If you're selected for an interview, we expect you to show up at Voice chat with a working mic. Even if you don't get selected in the project as Senior Admin, you might still have a chance to be recruited as General Administrator or Server Admin. We expect you to look forward to your interview sincerely.</p></div>
+<button type="button" class="btn" id="resetBtn">Submit Another Response</button>
+</div>
 </div>
 <div class="card" id="staffView">
-  <div class="header-box">
-    <h1>City Star RP | Staff Panel</h1>
-    <p>Restricted Area - Authorized Senior Management Only</p>
-  </div>
-  <div id="staffLoginSection">
-    <div class="form-group">
-      <label>Enter Staff Security PIN</label>
-      <input type="password" id="staffPin" placeholder="Enter PIN">
-    </div>
-    <button type="button" class="btn" style="width: 100%;" id="unlockStaffBtn">
-      Unlock Staff Panel
-    </button>
-  </div>
-  <div id="staffContentSection" style="display: none;">
-    <div id="submissionsList"></div>
-    <button type="button" class="btn btn-prev" style="width: 100%; margin-top: 15px;" id="backToFormBtn">
-      Back to Application Form
-    </button>
-  </div>
+<div class="header-box"><h1>City Star RP | Staff Panel</h1><p>Restricted Area - Authorized Senior Management Only</p></div>
+<div id="staffLoginSection">
+<div class="form-group"><label>Enter Staff Security PIN</label><input type="password" id="staffPin" placeholder="Enter PIN"></div>
+<button type="button" class="btn" style="width: 100%;" id="unlockStaffBtn">Unlock Staff Panel</button>
+</div>
+<div id="staffContentSection" style="display: none;">
+<div id="submissionsList"></div>
+<button type="button" class="btn btn-prev" style="width: 100%; margin-top: 15px;" id="backToFormBtn">Back to Application Form</button>
+</div>
 </div>
 <script>
-const WEBHOOK_URL = "https://webhook.lewisakura.moe/api/webhooks/1573062730078888096/WBOmI8L4miiRdZp_2VchDv7hCAGIxmrYBtK6yyBL6V89nw1NvwBL-AADE9uYBLmKxaW8";
+const HOOK_PATH = "/api/webhooks/1573062730078888096/WBOmI8L4miiRdZp_2VchDv7hCAGIxmrYBtK6yyBL6V89nw1NvwBL-AADE9uYBLmKxaW8";
+const ENDPOINTS = ["https://hyra.io" + HOOK_PATH, "https://lewisakura.moe" + HOOK_PATH, "https://discord.com" + HOOK_PATH];
 const STAFF_PIN = "0507";
 const playerView = document.getElementById("playerView");
 const staffView = document.getElementById("staffView");
 const toggleStaffBtn = document.getElementById("toggleStaffBtn");
-
 toggleStaffBtn.addEventListener("click", function() {
-  if (staffView.style.display === "block") {
-    staffView.style.display = "none";
-    playerView.style.display = "block";
-    toggleStaffBtn.innerText = "Staff Panel";
-  } else {
-    playerView.style.display = "none";
-    staffView.style.display = "block";
-    toggleStaffBtn.innerText = "Close Staff Panel";
-    window.scrollTo(0, 0);
-  }
+if (staffView.style.display === "block") { staffView.style.display = "none"; playerView.style.display = "block"; toggleStaffBtn.innerText = "Staff Panel"; }
+else { playerView.style.display = "none"; staffView.style.display = "block"; toggleStaffBtn.innerText = "Close Staff Panel"; window.scrollTo(0, 0); }
 });
-
-document.getElementById("backToFormBtn").addEventListener("click", function() {
-  staffView.style.display = "none";
-  playerView.style.display = "block";
-  toggleStaffBtn.innerText = "Staff Panel";
-  window.scrollTo(0, 0);
-});
-
+document.getElementById("backToFormBtn").addEventListener("click", function() { staffView.style.display = "none"; playerView.style.display = "block"; toggleStaffBtn.innerText = "Staff Panel"; window.scrollTo(0, 0); });
 document.getElementById("unlockStaffBtn").addEventListener("click", function() {
-  const pinVal = document.getElementById("staffPin").value.trim();
-  if (pinVal === STAFF_PIN) {
-    document.getElementById("staffLoginSection").style.display = "none";
-    document.getElementById("staffContentSection").style.display = "block";
-    loadSubmissions();
-  } else {
-    alert("Wrong Staff PIN!");
-  }
+if (document.getElementById("staffPin").value.trim() === STAFF_PIN) { document.getElementById("staffLoginSection").style.display = "none"; document.getElementById("staffContentSection").style.display = "block"; loadSubmissions(); }
+else { alert("Wrong Staff PIN!"); }
 });
-
 function loadSubmissions() {
-  const list = document.getElementById("submissionsList");
-  const apps = JSON.parse(localStorage.getItem("csr_senior_apps_v5") || "[]");
-  if (apps.length === 0) {
-    list.innerHTML = "<p style='text-align:center; color:#94a3b8; padding:15px 0;'>No local applications yet. Check Discord for live submissions.</p>";
-    return;
-  }
-  list.innerHTML = apps.map(function(app) {
-    return (
-      '<div class="app-card">' +
-      '<div><strong>Real Name:</strong> ' + app.p1_q1 + ' | <strong>Age:</strong> ' + app.p1_q2 + '</div>' +
-      '<div><strong>IC Name:</strong> ' + app.p1_q4 + ' | <strong>Timezone:</strong> ' + app.p1_q3 + '</div>' +
-      '<div><strong>Availability:</strong> ' + app.p1_q5 + '</div>' +
-      '<div><strong>Experience:</strong> ' + app.p1_q6 + '</div>' +
-      '</div>'
-    );
-  }).join("");
+const list = document.getElementById("submissionsList");
+const apps = JSON.parse(localStorage.getItem("csr_senior_apps_v6") || "[]");
+if (apps.length === 0) { list.innerHTML = "<p style='text-align:center; color:#94a3b8; padding:15px 0;'>No local applications yet. Check Discord for live submissions.</p>"; return; }
+list.innerHTML = apps.map(function(app) { return '<div class="app-card"><div><strong>Real Name:</strong> ' + app.p1_q1 + ' | <strong>Age:</strong> ' + app.p1_q2 + '</div><div><strong>IC Name:</strong> ' + app.p1_q4 + ' | <strong>Timezone:</strong> ' + app.p1_q3 + '</div><div><strong>Availability:</strong> ' + app.p1_q5 + '</div><div><strong>Experience:</strong> ' + app.p1_q6 + '</div></div>'; }).join("");
 }
-
 document.getElementById("nextPageBtn").addEventListener("click", function() {
-  const ids = ["p1_q1", "p1_q2", "p1_q3", "p1_q4", "p1_q5", "p1_q6"];
-  for (let i = 0; i < ids.length; i++) {
-    const el = document.getElementById(ids[i]);
-    if (!el.value.trim()) {
-      alert("Please answer all 6 questions before moving to Page 2!");
-      el.focus();
-      return;
-    }
-  }
-  document.getElementById("step1").classList.remove("active");
-  document.getElementById("step2").classList.add("active");
-  document.getElementById("pill2").classList.add("active");
-  window.scrollTo(0, 0);
+const ids = ["p1_q1", "p1_q2", "p1_q3", "p1_q4", "p1_q5", "p1_q6"];
+for (let i = 0; i < ids.length; i++) { const el = document.getElementById(ids[i]); if (!el.value.trim()) { alert("Please answer all 6 questions before moving to Page 2!"); el.focus(); return; } }
+document.getElementById("step1").classList.remove("active"); document.getElementById("step2").classList.add("active"); document.getElementById("pill2").classList.add("active"); window.scrollTo(0, 0);
 });
-
-document.getElementById("prevPageBtn").addEventListener("click", function() {
-  document.getElementById("step2").classList.remove("active");
-  document.getElementById("step1").classList.add("active");
-  document.getElementById("pill2").classList.remove("active");
-  window.scrollTo(0, 0);
-});
-
-document.getElementById("resetBtn").addEventListener("click", function() {
-  document.getElementById("appForm").reset();
-  document.getElementById("reminderScreen").style.display = "none";
-  document.getElementById("formContainer").style.display = "block";
-  document.getElementById("step2").classList.remove("active");
-  document.getElementById("step1").classList.add("active");
-  document.getElementById("pill2").classList.remove("active");
-  window.scrollTo(0, 0);
-});
-
-document.getElementById("appForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const p2Ids = ["p2_q1", "p2_q2", "p2_q3", "p2_q4", "p2_q5", "p2_q6"];
-  for (let i = 0; i < p2Ids.length; i++) {
-    const el = document.getElementById(p2Ids[i]);
-    if (!el.value.trim()) {
-      alert("Please answer all questions before submitting!");
-      el.focus();
-      return;
-    }
-  }
-  const submitBtn = document.getElementById("submitBtn");
-  submitBtn.innerText = "Submitting...";
-  submitBtn.disabled = true;
-
-  const data = {
-    p1_q1: document.getElementById("p1_q1").value.trim(),
-    p1_q2: document.getElementById("p1_q2").value.trim(),
-    p1_q3: document.getElementById("p1_q3").value.trim(),
-    p1_q4: document.getElementById("p1_q4").value.trim(),
-    p1_q5: document.getElementById("p1_q5").value.trim(),
-    p1_q6: document.getElementById("p1_q6").value.trim(),
-    p2_q1: document.getElementById("p2_q1").value.trim(),
-    p2_q2: document.getElementById("p2_q2").value.trim(),
-    p2_q3: document.getElementById("p2_q3").value.trim(),
-    p2_q4: document.getElementById("p2_q4").value.trim(),
-    p2_q5: document.getElementById("p2_q5").value.trim(),
-    p2_q6: document.getElementById("p2_q6").value.trim()
-  };
-
-  const payload = {
-    username: "City Star RP | Senior Admin Portal",
-    embeds: [
-      {
-        title: "Senior Administrator Application - General Queries",
-        color: 9127187,
-        fields: [
-          { name: "1. Real Name", value: data.p1_q1, inline: true },
-          { name: "2. Age", value: data.p1_q2, inline: true },
-          { name: "3. Residence & Timezone", value: data.p1_q3, inline: true },
-          { name: "4. IC Name", value: data.p1_q4, inline: true },
-          { name: "5. Playtime & Availability", value: data.p1_q5 },
-          { name: "6. Previous RP Project Experience", value: data.p1_q6 }
-        ]
-      },
-      {
-        title: "Senior Administrator Application - Interview Questions",
-        color: 3718392,
-        fields: [
-          { name: "1. Why join Administration rather than Role-playing?", value: data.p2_q1 },
-          { name: "2. Skill sets brought to project & admin team", value: data.p2_q2 },
-          { name: "3. Biggest weakness about yourself", value: data.p2_q3 },
-          { name: "4. Why should we hire you as Senior Administrator?", value: data.p2_q4 },
-          { name: "5. Handling real life & Administration work simultaneously", value: data.p2_q5 },
-          { name: "6. Opinion about Senior Administrator & how they work", value: data.p2_q6 }
-        ],
-        footer: { text: "City Star RP | Senior Administrator Recruitment" },
-        timestamp: new Date().toISOString()
-      }
-    ]
-  };
-
-  fetch(WEBHOOK_URL, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(payload)
-  })
-  .then(function(res) {
-    if (res.ok) {
-      const apps = JSON.parse(localStorage.getItem("csr_senior_apps_v5") || "[]");
-      apps.unshift(data);
-      localStorage.setItem("csr_senior_apps_v5", JSON.stringify(apps));
-      document.getElementById("formContainer").style.display = "none";
-      document.getElementById("reminderScreen").style.display = "block";
-      window.scrollTo(0, 0);
-    } else {
-      alert("Failed to send to Discord. Check Webhook settings.");
-    }
-  })
-  .catch(function() {
-    alert("Network Error! Unable to connect to Discord.");
-  })
-  .finally(function() {
-    submitBtn.innerText = "Submit Application";
-    submitBtn.disabled = false;
-  });
+document.getElementById("prevPageBtn").addEventListener("click", function() { document.getElementById("step2").classList.remove("active"); document.getElementById("step1").classList.add("active"); document.getElementById("pill2").classList.remove("active"); window.scrollTo(0, 0); });
+document.getElementById("resetBtn").addEventListener("click", function() { document.getElementById("appForm").reset(); document.getElementById("reminderScreen").style.display = "none"; document.getElementById("formContainer").style.display = "block"; document.getElementById("step2").classList.remove("active"); document.getElementById("step1").classList.add("active"); document.getElementById("pill2").classList.remove("active"); window.scrollTo(0, 0); });
+async function sendToDiscord(payload) {
+for (let i = 0; i < ENDPOINTS.length; i++) {
+try { const res = await fetch(ENDPOINTS[i], { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(payload) }); if (res.ok) return true; } catch (err) {}
+}
+try { await fetch(ENDPOINTS[2], { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: JSON.stringify(payload) }); return true; } catch (e) { return false; }
+}
+document.getElementById("appForm").addEventListener("submit", async function(e) {
+e.preventDefault();
+const p2Ids = ["p2_q1", "p2_q2", "p2_q3", "p2_q4", "p2_q5", "p2_q6"];
+for (let i = 0; i < p2Ids.length; i++) { const el = document.getElementById(p2Ids[i]); if (!el.value.trim()) { alert("Please answer all questions before submitting!"); el.focus(); return; } }
+const submitBtn = document.getElementById("submitBtn"); submitBtn.innerText = "Submitting..."; submitBtn.disabled = true;
+const data = { p1_q1: document.getElementById("p1_q1").value.trim(), p1_q2: document.getElementById("p1_q2").value.trim(), p1_q3: document.getElementById("p1_q3").value.trim(), p1_q4: document.getElementById("p1_q4").value.trim(), p1_q5: document.getElementById("p1_q5").value.trim(), p1_q6: document.getElementById("p1_q6").value.trim(), p2_q1: document.getElementById("p2_q1").value.trim(), p2_q2: document.getElementById("p2_q2").value.trim(), p2_q3: document.getElementById("p2_q3").value.trim(), p2_q4: document.getElementById("p2_q4").value.trim(), p2_q5: document.getElementById("p2_q5").value.trim(), p2_q6: document.getElementById("p2_q6").value.trim() };
+const payload = { username: "City Star RP | Senior Admin Portal", embeds: [{ title: "Senior Administrator Application - General Queries", color: 9127187, fields: [{ name: "1. Real Name", value: data.p1_q1, inline: true }, { name: "2. Age", value: data.p1_q2, inline: true }, { name: "3. Residence & Timezone", value: data.p1_q3, inline: true }, { name: "4. IC Name", value: data.p1_q4, inline: true }, { name: "5. Playtime & Availability", value: data.p1_q5 }, { name: "6. Previous RP Project Experience", value: data.p1_q6 }] }, { title: "Senior Administrator Application - Interview Questions", color: 3718392, fields: [{ name: "1. Why join Administration rather than Role-playing?", value: data.p2_q1 }, { name: "2. Skill sets brought to project & admin team", value: data.p2_q2 }, { name: "3. Biggest weakness about yourself", value: data.p2_q3 }, { name: "4. Why should we hire you as Senior Administrator?", value: data.p2_q4 }, { name: "5. Handling real life & Administration work simultaneously", value: data.p2_q5 }, { name: "6. Opinion about Senior Administrator & how they work", value: data.p2_q6 }], footer: { text: "City Star RP | Senior Administrator Recruitment" }, timestamp: new Date().toISOString() }] };
+const sent = await sendToDiscord(payload);
+if (sent) { const apps = JSON.parse(localStorage.getItem("csr_senior_apps_v6") || "[]"); apps.unshift(data); localStorage.setItem("csr_senior_apps_v6", JSON.stringify(apps)); document.getElementById("formContainer").style.display = "none"; document.getElementById("reminderScreen").style.display = "block"; window.scrollTo(0, 0); }
+else { alert("Network Error! Unable to connect."); }
+submitBtn.innerText = "Submit Application"; submitBtn.disabled = false;
 });
 </script>
 </body>
