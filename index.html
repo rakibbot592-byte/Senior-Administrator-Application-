@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -37,20 +37,21 @@ input,textarea{width:100%;padding:11px;background:#090d16;border:1px solid #3341
 <form id="form">
 <div class="step on" id="s1">
 <div class="fg"><label>1. What's your Real Name? <span>*</span></label><input id="q1" required></div>
-<div class="fg"><label>2. What's your Age? <span>*</span></label><input type="number" id="q2" required></div>
-<div class="fg"><label>3. What's your Place of Residence and Timezone? <span>*</span></label><input id="q3" required></div>
-<div class="fg"><label>4. What's Your IC Name? <span>*</span></label><input id="q4" required></div>
-<div class="fg"><label>5. General Playtime and availability you can offer to administration: <span>*</span></label><input id="q5" required></div>
-<div class="fg"><label>6. Have you been part of other RP projects before? If yes, kindly mention your experience: <span>*</span></label><textarea id="q6" rows="3" required></textarea></div>
+<div class="fg"><label>2. What's your Discord Tag (Username)? <span>*</span></label><input id="q2" required></div>
+<div class="fg"><label>3. What's your Age? <span>*</span></label><input type="number" id="q3" required></div>
+<div class="fg"><label>4. What's your Place of Residence and Timezone? <span>*</span></label><input id="q4" required></div>
+<div class="fg"><label>5. What's Your IC Name? <span>*</span></label><input id="q5" required></div>
+<div class="fg"><label>6. General Playtime and availability you can offer to administration: <span>*</span></label><input id="q6" required></div>
+<div class="fg"><label>7. Have you been part of other RP projects before? If yes, kindly mention your experience: <span>*</span></label><textarea id="q7" rows="3" required></textarea></div>
 <div class="btns" style="justify-content:flex-end"><button type="button" class="btn" id="nxt">Next Page</button></div>
 </div>
 <div class="step" id="s2">
-<div class="fg"><label>1. Why do you wanna join Administration team rather than Role-playing in the project? <span>*</span></label><textarea id="q7" rows="3" required></textarea></div>
-<div class="fg"><label>2. What skill sets do you bring towards the project and administration team? <span>*</span></label><textarea id="q8" rows="3" required></textarea></div>
-<div class="fg"><label>3. What is/are your biggest weakness about yourself? <span>*</span></label><textarea id="q9" rows="2" required></textarea></div>
-<div class="fg"><label>4. Why should we hire you as Senior Administrator of the project? We expect a brief description if possible. <span>*</span></label><textarea id="q10" rows="3" required></textarea></div>
-<div class="fg"><label>5. How would you handle your real life and Administration work simultaneously? <span>*</span></label><textarea id="q11" rows="2" required></textarea></div>
-<div class="fg"><label>6. What's your opinion about a Senior Administrator and how do they work? <span>*</span></label><textarea id="q12" rows="3" required></textarea></div>
+<div class="fg"><label>1. Why do you wanna join Administration team rather than Role-playing in the project? <span>*</span></label><textarea id="q8" rows="3" required></textarea></div>
+<div class="fg"><label>2. What skill sets do you bring towards the project and administration team? <span>*</span></label><textarea id="q9" rows="3" required></textarea></div>
+<div class="fg"><label>3. What is/are your biggest weakness about yourself? <span>*</span></label><textarea id="q10" rows="2" required></textarea></div>
+<div class="fg"><label>4. Why should we hire you as Senior Administrator of the project? We expect a brief description if possible. <span>*</span></label><textarea id="q11" rows="3" required></textarea></div>
+<div class="fg"><label>5. How would you handle your real life and Administration work simultaneously? <span>*</span></label><textarea id="q12" rows="2" required></textarea></div>
+<div class="fg"><label>6. What's your opinion about a Senior Administrator and how do they work? <span>*</span></label><textarea id="q13" rows="3" required></textarea></div>
 <div class="btns"><button type="button" class="btn prev" id="prv">Previous</button><button type="submit" class="btn" id="sub">Submit Application</button></div>
 </div>
 </form>
@@ -72,13 +73,13 @@ const U=["https://lewisakura.moe"+H,"https://hyra.io"+H,"https://discord.com"+H]
 const g=i=>document.getElementById(i);
 g("tBtn").onclick=()=>{const s=g("sView").style.display==="block";g("sView").style.display=s?"none":"block";g("pView").style.display=s?"block":"none";g("tBtn").innerText=s?"Staff Panel":"Close";};
 g("bak").onclick=()=>g("tBtn").click();
-g("unl").onclick=()=>{if(g("pin").value.trim()==="0507"){g("sLog").style.display="none";g("sCon").style.display="block";const a=JSON.parse(localStorage.getItem("csr_apps")||"[]");g("list").innerHTML=a.length?a.map(x=>`<div class="app"><b>1. Name:</b> ${x.q1} | <b>2. Age:</b> ${x.q2}<br><b>3. TZ:</b> ${x.q3} | <b>4. IC:</b> ${x.q4}<br><b>5. Time:</b> ${x.q5}<br><b>6. Exp:</b> ${x.q6}<br><hr style="border-color:#334155;margin:6px 0"><b>Why Admin:</b> ${x.q7}<br><b>Skills:</b> ${x.q8}<br><b>Weakness:</b> ${x.q9}<br><b>Why Hire:</b> ${x.q10}<br><b>Balance:</b> ${x.q11}<br><b>Opinion:</b> ${x.q12}</div>`).join(""):"No submissions yet.";}else alert("Wrong PIN!");};
-g("nxt").onclick=()=>{for(let i=1;i<=6;i++)if(!g("q"+i).value.trim())return alert("Fill all fields!");g("s1").classList.remove("on");g("s2").classList.add("on");g("p2").classList.add("on");window.scrollTo(0,0);};
+g("unl").onclick=()=>{if(g("pin").value.trim()==="0507"){g("sLog").style.display="none";g("sCon").style.display="block";const a=JSON.parse(localStorage.getItem("csr_apps_v2")||"[]");g("list").innerHTML=a.length?a.map(x=>`<div class="app"><b>1. Name:</b> ${x.q1} | <b>Discord:</b> ${x.q2}<br><b>3. Age:</b> ${x.q3} | <b>4. TZ:</b> ${x.q4} | <b>5. IC:</b> ${x.q5}<br><b>6. Time:</b> ${x.q6}<br><b>7. Exp:</b> ${x.q7}<br><hr style="border-color:#334155;margin:6px 0"><b>Why Admin:</b> ${x.q8}<br><b>Skills:</b> ${x.q9}<br><b>Weakness:</b> ${x.q10}<br><b>Why Hire:</b> ${x.q11}<br><b>Balance:</b> ${x.q12}<br><b>Opinion:</b> ${x.q13}</div>`).join(""):"No submissions yet.";}else alert("Wrong PIN!");};
+g("nxt").onclick=()=>{for(let i=1;i<=7;i++)if(!g("q"+i).value.trim())return alert("Fill all fields!");g("s1").classList.remove("on");g("s2").classList.add("on");g("p2").classList.add("on");window.scrollTo(0,0);};
 g("prv").onclick=()=>{g("s2").classList.remove("on");g("s1").classList.add("on");g("p2").classList.remove("on");window.scrollTo(0,0);};
 g("rst").onclick=()=>{g("form").reset();g("rem").style.display="none";g("fBox").style.display="block";g("prv").click();};
-g("form").onsubmit=async e=>{e.preventDefault();g("sub").innerText="Submitting...";g("sub").disabled=true;const d={};for(let i=1;i<=12;i++)d["q"+i]=g("q"+i).value.trim();
-const a=JSON.parse(localStorage.getItem("csr_apps")||"[]");a.unshift(d);localStorage.setItem("csr_apps",JSON.stringify(a));
-const p={username:"City Star RP | Senior Admin",embeds:[{title:"General Queries",color:9127187,fields:[{name:"1. Real Name",value:d.q1,inline:true},{name:"2. Age",value:d.q2,inline:true},{name:"3. Residence & TZ",value:d.q3,inline:true},{name:"4. IC Name",value:d.q4,inline:true},{name:"5. Playtime",value:d.q5},{name:"6. Experience",value:d.q6}]},{title:"Interview Questions",color:3718392,fields:[{name:"1. Why Admin?",value:d.q7},{name:"2. Skill sets",value:d.q8},{name:"3. Weakness",value:d.q9},{name:"4. Why hire you?",value:d.q10},{name:"5. RL & Admin balance",value:d.q11},{name:"6. Opinion on Senior Admin",value:d.q12}]}]};
+g("form").onsubmit=async e=>{e.preventDefault();g("sub").innerText="Submitting...";g("sub").disabled=true;const d={};for(let i=1;i<=13;i++)d["q"+i]=g("q"+i).value.trim();
+const a=JSON.parse(localStorage.getItem("csr_apps_v2")||"[]");a.unshift(d);localStorage.setItem("csr_apps_v2",JSON.stringify(a));
+const p={username:"City Star RP | Senior Admin",embeds:[{title:"General Queries",color:9127187,fields:[{name:"1. Real Name",value:d.q1,inline:true},{name:"2. Discord Tag",value:d.q2,inline:true},{name:"3. Age",value:d.q3,inline:true},{name:"4. Residence & TZ",value:d.q4,inline:true},{name:"5. IC Name",value:d.q5,inline:true},{name:"6. Playtime",value:d.q6},{name:"7. Experience",value:d.q7}]},{title:"Interview Questions",color:3718392,fields:[{name:"1. Why Admin?",value:d.q8},{name:"2. Skill sets",value:d.q9},{name:"3. Weakness",value:d.q10},{name:"4. Why hire you?",value:d.q11},{name:"5. RL & Admin balance",value:d.q12},{name:"6. Opinion on Senior Admin",value:d.q13}]}]};
 for(let x of U){try{const r=await fetch(x,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p)});if(r.ok)break;}catch(e){}}
 g("fBox").style.display="none";g("rem").style.display="block";g("sub").innerText="Submit Application";g("sub").disabled=false;window.scrollTo(0,0);};
 </script>
